@@ -62,7 +62,7 @@ HRESULT LinkHelper::tryCreateShortcut(const std::wstring &appID)
 {
     wchar_t buffer[MAX_PATH];
     if (GetModuleFileNameEx(GetCurrentProcess(), nullptr, buffer, MAX_PATH) > 0) {
-        return tryCreateShortcut(L"SnoreToast.lnk", buffer, appID);
+        return tryCreateShortcut(L"Mooltipass.lnk", buffer, appID);
     }
     return E_FAIL;
 }

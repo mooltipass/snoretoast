@@ -150,7 +150,7 @@ SnoreToasts::USER_ACTION parse(std::vector<wchar_t*> args)
         } else  if (arg == L"-tb") {
             isTextBoxEnabled = true;
         } else  if (arg == L"-install") {
-            appID = L"Snore.DesktopToasts";
+            appID = L"Mooltipass";
             return SUCCEEDED(LinkHelper::tryCreateShortcut(appID)) ? SnoreToasts::Success : SnoreToasts::Failed;
         } else if (arg == L"-close") {
             id = nextArg(it, L"Missing agument to -close"
@@ -183,7 +183,7 @@ SnoreToasts::USER_ACTION parse(std::vector<wchar_t*> args)
         hr = (title.length() > 0 && body.length() > 0) ? S_OK : E_FAIL;
         if (SUCCEEDED(hr)) {
             if (appID.length() == 0) {
-                appID = L"Snore.DesktopToasts";
+                appID = L"Mooltipass";
                 hr = LinkHelper::tryCreateShortcut(appID);
             }
             if (SUCCEEDED(hr)) {
